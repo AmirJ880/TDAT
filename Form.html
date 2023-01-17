@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Data Collection Form</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="TDAT.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Acme&family=Combo&family=Merriweather&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+</head>
+  <body class="form-body">
+    <div class="form-top">
+      <a href="index.html"><img class="tdat-logo" src="images/TDAT.png" alt="logo"></a>
+      <h1 class="form-title">Data Collection Form</h1>
+    </div>
+    <form action="connect.php" method="post">
+    <div class="form-middle">
+      <br>
+      <fieldset>
+        <legend class="legend">Project Information</legend>
+        <table class="table">
+          <tr>
+            <td><label for="name" class="form-cell">Project Name</label></td>
+            <td><label for="accela">Accela Record Number</label></td>
+            <td><label for="type">Application Type</label></td>
+          </tr>
+          <tr>
+            <td><input type="text" name="name" id="name"></td>
+            <td><input type="text" name="accela" id="accela"></td>
+            <td>
+              <select id="type" name="type">
+              <option value="a">Site Plan Review</option>
+              <option value="b">Eucleadian Rezoning</option>
+              <option value="c">MPUD</option>
+              <option value="d">Comperehensive Plan Amendment</option>
+            </select></td>
+          </tr>
+        </table>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend class="legend">Entitlements</legend>
+        <table class="table">
+          <tr>
+            <td><label for="SF">Single Family: (units)</label></td>
+            <td><input type="number" name="SF" id="SF"></td>
+            <td><label for="MF">Multi Family: (units)</label></td>
+            <td><input type="number" name="MF" id="MF"></td>
+          </tr>
+          <tr>
+            <td><label for="COM">Commercial: (sqf)</label></td>
+            <td><input type="number" name="COM" id="COM"></td>
+            <td><label for="office">Office: (sqf)</label></td>
+            <td><input type="number" name="office" id="office"></td>
+          </tr>
+          <tr>
+            <td><label for="Ind">Industrial: (sqf)</label></td>
+            <td><input type="number" name="Ind" id="Ind"></td>
+            <td><label for="school">School: (students)</label></td>
+            <td><input type="number" name="school" id="school"></td>
+          </tr>
+        </table>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend class="legend">Traffic Impact Study</legend>
+        <table class="table">
+          <tr>
+            <td><label for="study">Study Type:</label></td>
+            <td><select id="study" name="study">
+              <option value="a">Access Managment</option>
+              <option value="b">Timing and Phasing</option>
+              <option value="c">Needs Assessment</option>
+            <td><label for="date">Study Date:</label></td>
+            <td><input type="date" name="date" id="date"></td>
+          </tr>
+        </table>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend class="legend">Trip Generation</legend>
+        <table class="table">
+          <tr>
+            <td><label for="daily">Daily Trips:</label></td>
+            <td><input type="number" name="daily" id="daily"></td>
+          </tr>
+          <tr>
+            <td><label for="AM">AM Peak Hour Trips:</label></td>
+            <td><input type="number" name="AM" id="AM"></td>
+            <td><label for="AMnet">AM Net Increase:</label></td>
+            <td><input type="number" name="AMnet" id="AMnet"></td>
+          </tr>
+          <tr>
+            <td><label for="PM">PM Peak Hour Trips:</label></td>
+            <td><input type="number" name="PM" id="PM"></td>
+            <td><label for="PMnet">PM Net Increase:</label></td>
+            <td><input type="number" name="PMnet" id="PMnet"></td>
+          </tr>
+        </table>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend class="legend">Roadway Segment Analysis</legend>
+        <table class="table">
+          <tr>
+            <td><label for="road1">Roadway Name</label></td>
+            <td><label for="segment1">TDAT ID</label></td>
+            <td><label for="vc1">V/C</label></td>
+            <td><label for="PIP1">Project Impact %</label></td>
+            <td><label for="mitigation1">Mitigation</label></td>
+          </tr>
+          <tr>
+            <td><input class="input150" type="text" name="road1" id="road1"></td>
+            <td><input class="input100" type="number" name="segment1" id="segment1"></td>
+            <td><input class="input100" type="number" name="vc1" id="vc1"></td>
+            <td><input class="input150" type="number" name="PIP1" id="PIP1"></td>
+            <td><select id="mitigation1" name="mitigation1">
+              <option value="a">Substandard Road Improvement</option>
+              <option value="b">Widenning</option>
+              <option value="c">Constructing</option></td>
+          </tr>
+          <tr>
+            <td><label for="road2">Roadway Name</label></td>
+            <td><label for="segment2">TDAT ID</label></td>
+            <td><label for="vc2">V/C</label></td>
+            <td><label for="PIP2">Project Impact %</label></td>
+            <td><label for="mitigation2">Mitigation</label></td>
+          </tr>
+          <tr>
+            <td><input class="input150" type="text" name="road2" id="road2"></td>
+            <td><input class="input100" type="number" name="segment2" id="segment2"></td>
+            <td><input class="input100" type="number" name="vc2" id="vc2"></td>
+            <td><input class="input150" type="number" name="PIP2" id="PIP2"></td>
+            <td><select id="mitigation2" name="mitigation2">
+              <option value="a">Substandard Road Improvement</option>
+              <option value="b">Widenning</option>
+              <option value="c">Constructing</option></td>
+          </tr>
+          <tr>
+            <td><label for="road3">Roadway Name</label></td>
+            <td><label for="segment3">TDAT ID</label></td>
+            <td><label for="vc3">V/C</label></td>
+            <td><label for="PIP3">Project Impact %</label></td>
+            <td><label for="mitigation3">Mitigation</label></td>
+          </tr>
+          <tr>
+            <td><input class="input150" type="text" name="road3" id="road3"></td>
+            <td><input class="input100" type="number" name="segment3" id="segment3"></td>
+            <td><input class="input100" type="number" name="vc3" id="vc3"></td>
+            <td><input class="input150" type="number" name="PIP3" id="PIP3"></td>
+            <td><select id="mitigation3" name="mitigation3">
+              <option value="a">Substandard Road Improvement</option>
+              <option value="b">Widenning</option>
+              <option value="c">Constructing</option></td>
+          </tr>
+        </table>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend class="legend">Intersection Analysis</legend>
+        <table class="table">
+          <tr>
+            <td><label for="int1">Intersection Name</label></td>
+            <td><label for="intID1">TDAT ID</label></td>
+            <td><label for="movement1">Movement</label></td>
+            <td><label for="intVC1">V/C</label></td>
+            <td><label for="intPIP1">PIP(%)</label></td>
+            <td><label for="intmitigation1">Mitigation</label></td>
+          </tr>
+          <tr>
+            <td><input class="input150" type="text" name="int1" id="int1"></td>
+            <td><input class="input120" type="number" name="intID1" id="intID1"></td>
+            <td><select class="select150" id="movement1" name="movement1">
+              <option value="a">Northbound Left</option>
+              <option value="b">Northbound Through</option>
+              <option value="c">Northbound Right</option>
+              <option value="d">Southbound Left</option>
+              <option value="e">Southbound Through</option>
+              <option value="f">Southbound Right</option>
+              <option value="g">Westbound Left</option>
+              <option value="h">Westbound Through</option>
+              <option value="i">Westhbound Right</option>
+              <option value="j">Easthbound Left</option>
+              <option value="k">Easthbound Through</option>
+              <option value="l">Easthbound Right</option></td>
+            <td><input class="input50" type="number" name="intVC1" id="intVC1"></td>
+            <td><input class="input50" type="number" name="intPIP1" id="intPIP1"></td>
+            <td><select class="select150" id="intmitigation1" name="intmitigation1">
+              <option value="a">Northbound Left Turn Lane</option>
+              <option value="b">Northbound Right Turn Lane</option>
+              <option value="c">Southbound Left Turn Lane</option>
+              <option value="d">Southbound Right Turn Lane</option>
+              <option value="e">Westbound Left Turn Lane</option>
+              <option value="f">Westhbound Right Turn Lane</option>
+              <option value="g">Easthbound Left Turn Lane</option>
+              <option value="h">Easthbound Right Turn Lane</option>
+              <option value="i">Signal</option></td>
+          </tr>
+          <tr>
+            <td><label for="int2">Intersection Name</label></td>
+            <td><label for="intID2">TDAT ID</label></td>
+            <td><label for="movement2">Movement</label></td>
+            <td><label for="intVC2">V/C</label></td>
+            <td><label for="intPIP2">PIP(%)</label></td>
+            <td><label for="intmitigation2">Mitigation</label></td>
+          </tr>
+          <tr>
+            <td><input class="input150" type="text" name="int2" id="int2"></td>
+            <td><input class="input120" type="number" name="intID2" id="intID2"></td>
+            <td><select class="select150" id="movement2" name="movement2">
+              <option value="a">Northbound Left</option>
+              <option value="b">Northbound Through</option>
+              <option value="c">Northbound Right</option>
+              <option value="d">Southbound Left</option>
+              <option value="e">Southbound Through</option>
+              <option value="f">Southbound Right</option>
+              <option value="g">Westbound Left</option>
+              <option value="h">Westbound Through</option>
+              <option value="i">Westhbound Right</option>
+              <option value="j">Easthbound Left</option>
+              <option value="k">Easthbound Through</option>
+              <option value="l">Easthbound Right</option></td>
+            <td><input class="input50" type="number" name="intVC1" id="intVC1"></td>
+            <td><input class="input50" type="number" name="intPIP1" id="intPIP1"></td>
+            <td><select class="select150" id="intmitigation1" name="intmitigation1">
+              <option value="a">Northbound Left Turn Lane</option>
+              <option value="b">Northbound Right Turn Lane</option>
+              <option value="c">Southbound Left Turn Lane</option>
+              <option value="d">Southbound Right Turn Lane</option>
+              <option value="e">Westbound Left Turn Lane</option>
+              <option value="f">Westhbound Right Turn Lane</option>
+              <option value="g">Easthbound Left Turn Lane</option>
+              <option value="h">Easthbound Right Turn Lane</option>
+              <option value="i">Signal</option></td>
+          </tr>
+          <tr>
+            <td><label for="int3">Intersection Name</label></td>
+            <td><label for="intID3">TDAT ID</label></td>
+            <td><label for="movement3">Movement</label></td>
+            <td><label for="intVC3">V/C</label></td>
+            <td><label for="intPIP3">PIP(%)</label></td>
+            <td><label for="intmitigation3">Mitigation</label></td>
+          </tr>
+          <tr>
+            <td><input class="input150" type="text" name="int3" id="int3"></td>
+            <td><input class="input120" type="number" name="intID3" id="intID3"></td>
+            <td><select class="select150" id="movement3" name="movement3">
+              <option value="a">Northbound Left</option>
+              <option value="b">Northbound Through</option>
+              <option value="c">Northbound Right</option>
+              <option value="d">Southbound Left</option>
+              <option value="e">Southbound Through</option>
+              <option value="f">Southbound Right</option>
+              <option value="g">Westbound Left</option>
+              <option value="h">Westbound Through</option>
+              <option value="i">Westhbound Right</option>
+              <option value="j">Easthbound Left</option>
+              <option value="k">Easthbound Through</option>
+              <option value="l">Easthbound Right</option></td>
+            <td><input class="input50" type="number" name="intVC1" id="intVC1"></td>
+            <td><input class="input50" type="number" name="intPIP1" id="intPIP1"></td>
+            <td><select class="select150" id="intmitigation1" name="intmitigation1">
+              <option value="a">Northbound Left Turn Lane</option>
+              <option value="b">Northbound Right Turn Lane</option>
+              <option value="c">Southbound Left Turn Lane</option>
+              <option value="d">Southbound Right Turn Lane</option>
+              <option value="e">Westbound Left Turn Lane</option>
+              <option value="f">Westhbound Right Turn Lane</option>
+              <option value="g">Easthbound Left Turn Lane</option>
+              <option value="h">Easthbound Right Turn Lane</option>
+              <option value="i">Signal</option></td>
+          </tr>
+        </table>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend class="legend">Signiture</legend>
+        <br>
+        <label for="comment">Comments:</label><br>
+        <textarea id="comment" name="comment" rows="4" cols="105">Plese type additional information here...</textarea>
+        <br>
+        <br>
+        Please enter your name, today's date, and click "Submit" button to save the project informtion.
+        <br>
+        <br>
+        <table class="table">
+          <tr>
+            <td><label for="fname">Full Name:</label></td>
+            <td><input type="text" name="fname" id="fname"></td>
+            <td><label for="today">Date:</label></td>
+            <td><input type="date" name="today" id="today"></td>
+            <td><button type="submit">Submit</button></td>
+          </tr>
+        </table>
+      </fieldset>
+    </div>
+  </form>
+    <div class="bottom">
+      <div class="bottom-images">
+        <img class="bottom-img" src="images/car.png" alt="bg">
+        <img class="pasco-logo" src="images/pasco.png" alt="logo">
+      </div>
+      <p class="address">8731 Citizens Drive, Suite 360<br>
+         New Port Richey, FL 33654<br>
+         (727) 874 - 2411
+       </p>
+       <p class="copy-right">© 2022 TDAT. All Rights Reserved.</p>
+    </div>
+</html>
